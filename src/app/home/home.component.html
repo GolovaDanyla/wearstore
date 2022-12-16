@@ -1,35 +1,36 @@
- 
 <h1>
-    <mat-toolbar color="primary">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" 
-        (click)="openMenu()">
+    <mat-toolbar color="accent">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="openMenu()">
             <mat-icon>menu</mat-icon>
         </button>
-        <span>Головна сторінка</span>
+        <h2>
+            Podlivka store
+        </h2>
         <span class="example-spacer"></span>
-        
+
         <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
+            <mat-icon>man</mat-icon>
         </button>
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
+            <mat-icon matBadge="15" matBadgeColor="warn" mat-raised-button
+                (click)="openDialog('1000ms', '500ms')">shopping_cart</mat-icon>
         </button>
     </mat-toolbar>
 </h1>
-
 <mat-accordion *ngIf="isOpenMenu">
     <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
                 Спортивні костюми
             </mat-panel-title>
-            
+
         </mat-expansion-panel-header>
         <p>Костюм №1</p>
         <p>Костюм №2</p>
         <p>Костюм №3</p>
         <p>Костюм №4</p>
-        
+
 
     </mat-expansion-panel>
 
@@ -38,7 +39,7 @@
             <mat-panel-title>
                 Плаття
             </mat-panel-title>
-            
+
         </mat-expansion-panel-header>
         <p>Плаття №1</p>
         <p>Плаття №2</p>
@@ -49,68 +50,141 @@
             <mat-panel-title>
                 Куртки
             </mat-panel-title>
-            
+
         </mat-expansion-panel-header>
         <p>Куртка №1</p>
         <p>Куртка №2</p>
     </mat-expansion-panel>
 
-        <mat-expansion-panel hideToggle>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Джинси
-                </mat-panel-title>
-                
-            </mat-expansion-panel-header>
-            <p>Джинси №1</p>
-            <p>Джинси №2</p>
-     </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Джинси
+            </mat-panel-title>
 
-    </mat-accordion>
-    <div>
+        </mat-expansion-panel-header>
+        <p>Джинси №1</p>
+        <p>Джинси №2</p>
+    </mat-expansion-panel>
+
+</mat-accordion>
+
+<!-- <div class="firstImage">
         
-        <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Платье</mat-card-title>
-              <mat-card-subtitle>Платье на телке</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://ivona.ua/i/54/41/45/4/5441454/824be3001faf12e9cd64b4a4b5e1eaa6-quality_100Xallow_enlarge_0Xw_600Xh_0.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <p>
-                Ебанное платье
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>ПОНРАВИЛОСЬ</button>
-              <button mat-button>ПОДЕЛИТЬСЯ</button>
-            </mat-card-actions>
-          </mat-card>
-    </div>
-      
+        <img src="/assets/podlivka_store.jpg" alt="">
+        
+    </div> -->
+
+<div class="allCard" style="max-width: 1600px; margin: auto">
 
     <div>
-        
+
         <mat-card class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Платье</mat-card-title>
-              <mat-card-subtitle>Платье на телке</mat-card-subtitle>
+
+                <mat-card-title>Платье на шкуре непонятно откуда</mat-card-title>
+                <mat-card-subtitle>Платье на телке</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="https://ivona.ua/i/54/41/45/4/5441454/824be3001faf12e9cd64b4a4b5e1eaa6-quality_100Xallow_enlarge_0Xw_600Xh_0.jpg" alt="Photo of a Shiba Inu">
+            <img mat-card-image
+                src="https://ivona.ua/i/54/41/45/4/5441454/824be3001faf12e9cd64b4a4b5e1eaa6-quality_100Xallow_enlarge_0Xw_600Xh_0.jpg">
             <mat-card-content>
-              <p>
-                Ебанное платье
-              </p>
+                <p>
+                    Ебанное платье
+                </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>ПОНРАВИЛОСЬ</button>
-              <button mat-button>ПОДЕЛИТЬСЯ</button>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
             </mat-card-actions>
-          </mat-card>
+        </mat-card>
+    </div>
+    <div>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Аварійний ліхтар 60LED</mat-card-title>
+                <mat-card-subtitle>Світильники</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/у.jpg">
+            <mat-card-content>
+                <p>
+                    Хуєта яка освітлює
+
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Аварійний ліхтар 60LED</mat-card-title>
+                <mat-card-subtitle>Світильники</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/ккк.jpg">
+            <mat-card-content>
+                Хуєта яка освітлює
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Аварійний ліхтар 60LED</mat-card-title>
+                <mat-card-subtitle>Світильники</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/ліхтар.jpg">
+            <mat-card-content>
+                Хуєта яка освітлює
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Аварійний ліхтар 60LED</mat-card-title>
+                <mat-card-subtitle>Світильники</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/м.jpg">
+            <mat-card-content>
+                Хуєта яка освітлює
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Аварійний ліхтар 60LED</mat-card-title>
+                <mat-card-subtitle>Світильники</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/р.jpg">
+            <mat-card-content>
+                Хуєта яка освітлює
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>КУПИТИ</button>
+                <button mat-button>ДОКЛАДНІШЕ</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
 
 
-
-<a routerLink="/about">go to About</a>
-
+</div>

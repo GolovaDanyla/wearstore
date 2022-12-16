@@ -2,11 +2,35 @@
     flex: 1 1 auto;
 }
 .example-card {
-    max-width: 400px;
+    
+    width: 250px;
+    // height: 300px;
     background-position: center;
 }
 
-.example-header-image {
-    background-image: url("https://ivona.ua/i/54/41/45/4/5441454/824be3001faf12e9cd64b4a4b5e1eaa6-quality_100Xallow_enlarge_0Xw_600Xh_0.jpg");
-    background-size: cover;
+
+
+.allCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    // width: 1500px;
+}
+div{
+    margin: 10px;
+}
+img{
+    display: flex;
+    width: 282px;
+    height: 300px;
+}
+.firstImage{
+    display: flex;
+    flex: auto;
+    // align-items: center;
+    max-width: 1600px;
+    max-height: 350px;
+    justify-content: center;
 }

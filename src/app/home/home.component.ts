@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   isOpenMenu: boolean = false;
-  constructor() { }
+  cards: any[] = [];
+  constructor(public dialog: MatDialog) { }
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DialogAnimationsExampleDialog, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -15,4 +24,7 @@ export class HomeComponent implements OnInit {
   openMenu() {
     this.isOpenMenu = !this.isOpenMenu
   }
+}
+export class DialogAnimationsExampleDialog {
+  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) {}
 }

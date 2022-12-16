@@ -10,11 +10,18 @@ import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PriceComponent } from './price/price.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +41,11 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatBadgeModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
